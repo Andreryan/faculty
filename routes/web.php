@@ -13,3 +13,8 @@
 
 Route::get('/', 'HomeController@index')->name("main");
 Route::get('/minor', 'HomeController@minor')->name("minor");
+Route::get('logout','PagesController@logout');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

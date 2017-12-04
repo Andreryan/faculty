@@ -1,3 +1,4 @@
+@if(Auth::check())
 <nav class="navbar-default navbar-static-side" role="navigation">
     <div class="sidebar-collapse">
         <ul class="nav metismenu" id="side-menu">
@@ -35,4 +36,33 @@
         </ul>
 
     </div>
+
+
 </nav>
+ @else
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul class="nav metismenu" id="side-menu">
+            <li class="nav-header" style="padding-bottom: 250px;">
+              
+                <div class="logo-element">
+                   <img src="{{asset('img/Universidad_de_Manila_Logo.png')}}" width="42" height="42">
+                </div>
+            </li>
+        
+            <div class="dropdown profile-element">
+            <li>
+
+                <span><img src="{{asset('img/header_two.png')}}" width="210" height="150"></span>
+            </li>
+            </div>
+        
+        </ul>
+        
+
+    </div>
+
+
+</nav>
+
+@endif
